@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ImageActivity">
+
+    <Gallery
+        android:id="@+id/gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:animationDuration="300"
+        android:background="@drawable/bg_gallery"
+        android:spacing="50dp"
+        android:unselectedAlpha="@android:integer/config_longAnimTime"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="20dp"
+        android:text="choose one of the pictures above"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.591" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:text="choose another media"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/image_audio"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Audio"
+        android:background="@drawable/button"
+        android:drawableStart="@drawable/ic_baseline_audiotrack_24"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/image_video"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button"
+        android:drawableStart="@drawable/ic_baseline_video_library_24"
+        android:text="Video"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
